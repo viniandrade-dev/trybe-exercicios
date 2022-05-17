@@ -1,3 +1,5 @@
+//Testando variáveis
+
 const name = 'Vinicíus';
 const birthCity = 'Brasília';
 let birthYear = 1998;
