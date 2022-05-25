@@ -11,8 +11,8 @@ console.log();
 //exercicio 2
 let sum = 0;
 
-for(let b = 0; b < numbers.length; b += 1){
-    sum += numbers[b];
+for(let b = 0; b < numbers.length; b += 1){  //b = b + 1
+    sum += numbers[b]; //sum = sum + numbers[b]
 }
 console.log(sum);
 
