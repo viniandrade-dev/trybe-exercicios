@@ -16,8 +16,6 @@ function addClassTech(event){
   for(let i = 0; i < myUl.length; i += 1){
       myUl[i].addClassName = 'tech';
   }
-  console.log(event.target);
-  console.log(event.type);
 }
 
 for (let j = 0; j < myUl.length; j += 1){
@@ -29,12 +27,34 @@ for (let j = 0; j < myUl.length; j += 1){
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
 
+function changeText(){
+    for (let k = 0; k < myUl.length; k += 1){
+        myUl[k].innerText = input.value
+    }
+}
+
+input.addEventListener('change', changeText);
+
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
+
+
+function externalLink(){
+    location.href = 'https://github.com/viniciustrybe/viniciustrybe.github.io';
+}
+
+myWebpage.addEventListener('dblclick', externalLink)
+
 // 4.1. Que tal redirecionar para seu portfólio?
 
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
+
+function changeColor(){
+    myWebpage.style.color = 'red';
+}
+
+myWebpage.addEventListener('mouseover', changeColor);
 
 // Segue abaixo um exemplo do uso de event.target:
 
@@ -45,6 +65,7 @@ function resetText(event) {
   // O event possui várias propriedades, porém a mais usada é o event.target,
   // que retorna o objeto que disparou o evento.
 }
+
 
 firstLi.addEventListener('dblclick', resetText);
 
