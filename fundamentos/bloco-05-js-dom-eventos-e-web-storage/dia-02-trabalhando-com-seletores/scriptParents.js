@@ -10,7 +10,19 @@ firstChild = ondeEstou.parentElement;
 
 let textAtencao = ondeEstou.parentElement.innerText;
 
-let terceiroFilho = ondeEstou.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+let irmaoDeOndeEstou = document.createElement('section');
+
+let pai = document.querySelector('#pai');
+
+irmaoDeOndeEstou.innerText = 'Aloou, som, teste';
+
+pai.appendChild(irmaoDeOndeEstou);
+
+let filhoDeOndeEstou = document.createElement('section');
+
+filhoDeOndeEstou.innerText = 'vai que e sua filhao';
+
+ondeEstou.appendChild(filhoDeOndeEstou);
 
 
 
