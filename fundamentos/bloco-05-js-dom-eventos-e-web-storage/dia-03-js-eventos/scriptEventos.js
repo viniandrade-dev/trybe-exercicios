@@ -23,11 +23,11 @@ createDaysOfTheWeek();
 
 // Escreva seu código abaixo.
 
+const dezDaysList = [
+  29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+  21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
+];
 function createDaysOfTheMonth() {
-  const dezDaysList = [
-    29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
-    20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
-  ];
   let daysList = document.getElementById("days");
 
   for (let i = 0; i < dezDaysList.length; i += 1) {
@@ -50,18 +50,60 @@ function createDaysOfTheMonth() {
     ) {
       days.className = "day friday";
     }
+    if (dezDaysList[i] === 25) {
+      days.className = "day friday holiday";
+    }
   }
 }
 
 createDaysOfTheMonth();
 
 let buttonContainer = document.querySelector(".buttons-container");
+let button = document.createElement("button");
 
 function createHolidayButton(Feriados) {
-  let button = document.createElement("button");
   button.innerText = "Feriados";
   button.className = "btn-holiday";
   buttonContainer.appendChild(button);
 }
 
 createHolidayButton();
+
+let holidays = document.getElementsByClassName("holiday");
+
+// exercicio 3
+
+function changeHolidaysBackColor() {
+  for (let j = 0; j < holidays.length; j += 1) {
+    if (holidays[j].style.backgroundColor === "purple") {
+      holidays[j].style.backgroundColor = "rgb(238,238,238)";
+    } else {
+      holidays[j].style.backgroundColor = "purple";
+    }
+  }
+}
+
+button.addEventListener("click", changeHolidaysBackColor);
+
+// exercicio 4
+
+function createSexta() {
+  sexButton = document.createElement("button");
+  sexButton.innerText = "Sexta-feira";
+  sexButton.setAttribute("id", "btn-friday");
+  buttonContainer.appendChild(sexButton);
+}
+
+createSexta();
+
+//exercicio 5
+
+let fridays = document.querySelectorAll(".friday");
+
+function changeFridayText() {
+  for (let k = 0; k < fridays.length; k += 1) {
+      fridays[k].innerText = 'SEXTOU MEU CHAPA!';
+  }
+}
+
+sexButton.addEventListener('click', changeFridayText);
