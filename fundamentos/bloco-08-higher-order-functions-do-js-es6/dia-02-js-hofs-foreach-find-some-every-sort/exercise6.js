@@ -60,15 +60,9 @@ const books = [
       releaseYear: 1928,
     },
   ];
-  
-  const smallerName = (array) => {
-    let smallestTitle = array[0].name;
-    array.forEach(element => {
-        if(element.name.length < smallestTitle.length){
-            smallestTitle = element.name;
-        }
-    })      
-    return smallestTitle;
-}
 
-console.log(smallerName(books));
+  const releaseIn80 = (arr) => arr.some(element => element.releaseYear > 1980 && element.releaseYear < 1991)
+
+  console.log(releaseIn80(books));
+
+  

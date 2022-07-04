@@ -60,15 +60,7 @@ const books = [
       releaseYear: 1928,
     },
   ];
-  
-  const smallerName = (array) => {
-    let smallestTitle = array[0].name;
-    array.forEach(element => {
-        if(element.name.length < smallestTitle.length){
-            smallestTitle = element.name;
-        }
-    })      
-    return smallestTitle;
-}
 
-console.log(smallerName(books));
+  const  bornXX = (array) => array.every(element => element.author.birthYear > 1900);
+
+console.log(bornXX(books));

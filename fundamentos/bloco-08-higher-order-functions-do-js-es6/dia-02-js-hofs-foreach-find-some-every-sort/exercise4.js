@@ -61,14 +61,6 @@ const books = [
     },
   ];
   
-  const smallerName = (array) => {
-    let smallestTitle = array[0].name;
-    array.forEach(element => {
-        if(element.name.length < smallestTitle.length){
-            smallestTitle = element.name;
-        }
-    })      
-    return smallestTitle;
-}
+  const booksOrderedByReleaseYearDesc = arr => arr.sort((a,b) => b.releaseYear - a.releaseYear)
 
-console.log(smallerName(books));
+  console.log(booksOrderedByReleaseYearDesc(books));

@@ -61,14 +61,7 @@ const books = [
     },
   ];
   
-  const smallerName = (array) => {
-    let smallestTitle = array[0].name;
-    array.forEach(element => {
-        if(element.name.length < smallestTitle.length){
-            smallestTitle = element.name;
-        }
-    })      
-    return smallestTitle;
-}
 
-console.log(smallerName(books));
+const first26CharactersBook = books.find(book => book.name.length === 26);
+
+console.log(first26CharactersBook.name);
