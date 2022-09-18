@@ -103,7 +103,7 @@
       randomColorButton.addEventListener('click', () => store.dispatch(addRandomColor()));
 
       store.subscribe(() => {
-       const {index, colors} = store.getState();
+        const {index, colors} = store.getState();
         console.log(index);
         const selectedColor = document.getElementById('value');
         const container = document.getElementById('container');
